@@ -1,6 +1,6 @@
 function Tempo(){
     const dynamicDate = new Date();
-    const dynamicDateString = dynamicDate.toGTMString();
+    const dynamicDateString = dynamicDate.toGMTString();
 
     return (
         <div>
@@ -9,4 +9,4 @@ function Tempo(){
     )
 }
 
-export default Tempo;
+export default Tempo
