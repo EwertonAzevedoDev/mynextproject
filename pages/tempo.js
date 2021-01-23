@@ -6,6 +6,7 @@ function Tempo(props){
         <div>
             <div>{dynamicDateString} (dinâmico)</div>
             <div>{props.staticDateString} (estático)</div>
+            <div>{props.allChampionsResponse} (estático)</div>
         </div>
     )
 }
@@ -13,10 +14,12 @@ function Tempo(props){
 export function getStaticProps(){
     const staticDate = new Date();
     const staticDateString = staticDate.toGMTString();
+    const allChampionsResponse = await fetch("https://mynextproject.vercel.app/api/tempo");
 
     return {
         props: {
-            staticDateString
+            staticDateString,
+            allChampionsResponse
         },
         revalidate: 1
     }
