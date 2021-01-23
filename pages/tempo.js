@@ -1,4 +1,4 @@
-import tempo from 'tempo';
+import tempo from 'api/tempo';
 
 function Tempo(props){
     const dynamicDate = new Date();
