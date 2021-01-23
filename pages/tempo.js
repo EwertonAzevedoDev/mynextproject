@@ -14,7 +14,7 @@ function Tempo(props){
 export function getStaticProps(){
     const staticDate = new Date();
     const staticDateString = staticDate.toGMTString();
-    const allChampionsResponse = await fetch("https://mynextproject.vercel.app/api/tempo");
+    const allChampionsResponse = fetch("https://mynextproject.vercel.app/api/tempo");
 
     return {
         props: {
