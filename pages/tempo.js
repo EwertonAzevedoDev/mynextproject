@@ -1,7 +1,9 @@
-async function Tempo(props){
+import tempo from 'tempo';
+
+function Tempo(props){
     const dynamicDate = new Date();
     const dynamicDateString = dynamicDate.toGMTString();
-    const allChampionsResponse = await fetch("https://mynextproject.vercel.app/api/tempo");
+    const allChampionsResponse = tempo;
     return (
         <div>
             <div>{dynamicDateString} (dinâmico)</div>
