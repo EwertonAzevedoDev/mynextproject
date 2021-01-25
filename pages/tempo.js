@@ -1,3 +1,5 @@
+import tempo from '../pages/api/tempo'
+
 function Tempo(props){
     const dynamicDate = new Date();
     const dynamicDateString = dynamicDate.toGMTString();
@@ -5,7 +7,8 @@ function Tempo(props){
     return (
         <div>
             <div>{dynamicDateString} (dinâmico)</div>
-            <div>{props.staticDateString} (estático)</div>           
+            <div>{props.staticDateString} (estático)</div>  
+            <div>{props.champions} (estático)</div>          
         </div>
     )
 }
@@ -13,10 +16,12 @@ function Tempo(props){
 export function getStaticProps(){
     const staticDate = new Date();
     const staticDateString = staticDate.toGMTString();    
+    const champions = tempo
 
     return {
         props: {
-            staticDateString            
+            staticDateString,
+            champions           
         },
         revalidate: 1
     }
