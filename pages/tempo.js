@@ -7,23 +7,22 @@ function Tempo(props){
     return (
         <div>
             <div>{dynamicDateString} (dinâmico)</div>
-            <div>{props.staticDateString} (estático)</div>  
-            <div>{props.champions} (estático)</div>          
+            <div>{props.allChampionsResponseJson} (estático)</div>           
         </div>
     )
 }
 
-export function getStaticProps(){
+export async function getStaticProps(){
     const staticDate = new Date();
     const staticDateString = staticDate.toGMTString();    
-    const champions = new tempo()
-
+    const allChampionsResponse = await fetch("http://ddragon.leagueoflegends.com/cdn/11.2.1/data/pt_BR/champion.json");
+    const allChampionsResponseJson = await allChampionsResponse.json();
     return {
         props: {
             staticDateString,
-            champions           
+            allChampionsResponseJson           
         },
-        revalidate: 1
+        revalidate: 10
     }
 }
 
