@@ -1,5 +1,3 @@
-import tempo from '../pages/api/tempo'
-
 function Tempo(props){
     const dynamicDate = new Date();
     const dynamicDateString = dynamicDate.toGMTString();
