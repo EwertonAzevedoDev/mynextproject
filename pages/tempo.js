@@ -16,7 +16,7 @@ function Tempo(props){
 export function getStaticProps(){
     const staticDate = new Date();
     const staticDateString = staticDate.toGMTString();    
-    const champions = tempo
+    const champions = new tempo()
 
     return {
         props: {
