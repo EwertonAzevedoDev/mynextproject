@@ -3,11 +3,11 @@ import axios from "axios";
 function Tempo(props){
     const dynamicDate = new Date();
     const dynamicDateString = dynamicDate.toGMTString();
- 
+    console.log(props.championsData)
     return (
         <div>
             <div>{dynamicDateString} (dinâmico)</div>
-            <div>{props.championsData} (estático)</div>           
+            <div>{props.championsData} (estáticos)</div>           
         </div>
     )
 }
