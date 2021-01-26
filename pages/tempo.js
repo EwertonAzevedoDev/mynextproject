@@ -3,7 +3,7 @@ import axios from "axios";
 function Tempo(props){
     const dynamicDate = new Date();
     const dynamicDateString = dynamicDate.toGMTString();
-    const dados = props.championsData  
+    const dados = props.championsData.allChampionsResponseJson.data  
     console.log(dados)
     const champs = Object.values(dados).map((dado) =>
        
