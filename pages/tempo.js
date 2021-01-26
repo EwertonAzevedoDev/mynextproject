@@ -1,3 +1,5 @@
+import axios from "axios";
+
 function Tempo(props){
     const dynamicDate = new Date();
     const dynamicDateString = dynamicDate.toGMTString();
@@ -5,7 +7,7 @@ function Tempo(props){
     return (
         <div>
             <div>{dynamicDateString} (dinâmico)</div>
-            <div>{props.allChampionsResponseJson} (estático)</div>           
+            <div>{props.champions} (estático)</div>           
         </div>
     )
 }
@@ -13,12 +15,11 @@ function Tempo(props){
 export async function getStaticProps(){
     const staticDate = new Date();
     const staticDateString = staticDate.toGMTString();    
-    const allChampionsResponse = await fetch("http://ddragon.leagueoflegends.com/cdn/11.2.1/data/pt_BR/champion.json");
-    const allChampionsResponseJson = await allChampionsResponse.json();
+    const champions = await axios.get("https://mynextproject.vercel.app/api/tempo")
     return {
         props: {
             staticDateString,
-            allChampionsResponseJson           
+            champions           
         },
         revalidate: 10
     }
