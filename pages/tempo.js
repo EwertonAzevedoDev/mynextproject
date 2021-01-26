@@ -7,7 +7,7 @@ function Tempo(props){
     return (
         <div>
             <div>{dynamicDateString} (dinâmico)</div>
-            <div>{props.champions} (estático)</div>           
+            <div>{props.championsData} (estático)</div>           
         </div>
     )
 }
