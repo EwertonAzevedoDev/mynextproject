@@ -3,7 +3,8 @@ import axios from "axios";
 function Tempo(props){
     const dynamicDate = new Date();
     const dynamicDateString = dynamicDate.toGMTString();
-    const dados = props.championsData   
+    const dados = props.championsData  
+    console.log(dados)
     const champs = Object.values(dados).map((dado) =>
        
         <div key={dado.key}>
@@ -20,6 +21,7 @@ function Tempo(props){
 export async function getStaticProps(){     
     const champions = await axios.get("https://mynextproject.vercel.app/api/tempo")
     const championsData = champions.data
+    console.log(championsData)
     return {
         props: {            
             championsData           
