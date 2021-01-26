@@ -3,30 +3,25 @@ import axios from "axios";
 function Tempo(props){
     const dynamicDate = new Date();
     const dynamicDateString = dynamicDate.toGMTString();
-    console.log(props.championsData)
-    const championsId = props.championsData.champions.data.map((id) => 
-        <li>{id}</li>
-    );
+    const dados = props.championsData.champions.data    
+    const champs = Object.values(dados).map((dado) =>
+       
+        <div key={dado.key}>
+             <img src={"http://ddragon.leagueoflegends.com/cdn/11.2.1/img/champion/" + dado.id + ".png"}/>  
+        </div>
+    )    
     return (
-        <div>
-            <div>{dynamicDateString} (dinâmico)</div>
-            <div>
-                <ul>
-                    {championsId}
-                </ul>
-            </div>           
+        <div>            
+            {champs}                  
         </div>
     )
 }
 
-export async function getStaticProps(){
-    const staticDate = new Date();
-    const staticDateString = staticDate.toGMTString();    
+export async function getStaticProps(){     
     const champions = await axios.get("https://mynextproject.vercel.app/api/tempo")
     const championsData = champions.data
     return {
-        props: {
-            staticDateString,
+        props: {            
             championsData           
         },
         revalidate: 10
