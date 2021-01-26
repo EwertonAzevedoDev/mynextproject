@@ -7,7 +7,7 @@ function Tempo(props){
     const champs = Object.values(dados).map((dado) =>
        
         <div key={dado.key}>
-             <img src={"http://ddragon.leagueoflegends.com/cdn/11.2.1/img/champion/" + dado.id + ".png"}/>  
+            <a><img src={"http://ddragon.leagueoflegends.com/cdn/11.2.1/img/champion/" + dado.id + ".png"}/> </a>
         </div>
     )    
     return (
