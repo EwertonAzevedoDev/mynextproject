@@ -16,10 +16,11 @@ export async function getStaticProps(){
     const staticDate = new Date();
     const staticDateString = staticDate.toGMTString();    
     const champions = await axios.get("https://mynextproject.vercel.app/api/tempo")
+    const championsData = champions.data
     return {
         props: {
             staticDateString,
-            champions           
+            championsData           
         },
         revalidate: 10
     }
