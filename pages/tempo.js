@@ -4,10 +4,17 @@ function Tempo(props){
     const dynamicDate = new Date();
     const dynamicDateString = dynamicDate.toGMTString();
     console.log(props.championsData)
+    const championsId = props.championsData.champions.data.map((id) => 
+        <li>{id}</li>
+    );
     return (
         <div>
             <div>{dynamicDateString} (dinâmico)</div>
-            <div>{props.championsData.champions.data}</div>           
+            <div>
+                <ul>
+                    {championsId}
+                </ul>
+            </div>           
         </div>
     )
 }
