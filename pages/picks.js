@@ -1,10 +1,12 @@
 import axios from "axios";
 import { useState } from "react";
-import ChampionGrid from "../src/components/championgrid"
+
+import ChampionSearch from "../src/components/championsearch"
+
 
 function Picks(props){    
-    return (      
-        <ChampionGrid champions={props.championsData}/>        
+    return (        
+        <ChampionSearch champions={props.championsData}/>     
     )
 }
 
