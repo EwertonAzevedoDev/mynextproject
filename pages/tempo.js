@@ -1,4 +1,5 @@
 import axios from "axios";
+import styles from '../styles.module.css'
 
 function Tempo(props){
     const dynamicDate = new Date();
@@ -12,9 +13,9 @@ function Tempo(props){
         </div>
     )    
     return (
-        <div>            
-            {champs}                  
-        </div>
+        <div>
+            <div className={styles.championsGrid}>{champs}</div>
+        </div>       
     )
 }
 
