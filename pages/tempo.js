@@ -8,13 +8,14 @@ function Tempo(props){
     console.log(dados)
     const champs = Object.values(dados).map((dado) =>
        
-        <div key={dado.key}>
-             <img src={"http://ddragon.leagueoflegends.com/cdn/11.2.1/img/champion/" + dado.id + ".png"}/>  
+        <div className={styles.championsGrid} key={dado.key}>
+             <img className={styles.imageskew} src={"http://ddragon.leagueoflegends.com/cdn/11.2.1/img/champion/" + dado.id + ".png"}/>  
         </div>
     )    
     return (
-        <div>
-            <div className={styles.championsGrid}>{champs}</div>
+        <div className={styles.championPool}>
+            <div className={styles.searchBar}><label>Procurar: </label><input type="text"/></div>
+            <div>{champs}</div>
         </div>       
     )
 }
