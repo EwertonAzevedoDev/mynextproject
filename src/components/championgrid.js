@@ -1,24 +1,24 @@
 import styles from '../../styles.module.css'
-import { useState } from "react";
+import { Children, useState } from "react";
+import Champion from "./champion"
 
 function ChampionGrid({champions, needle}){ 
     
     const [dados, setDados] = useState(champions)
-    const showlog = () => {
+    const showlog = (el) => {
         
-        console.log(champs.props.champion)
+        console.log(el)
     }
     const champs = Object.values(dados).map((dado, index) =>       
-        <div className={styles.championsGrid} key={dado.id} champion={dado}>
-             <img className={styles.imageskew} src={"http://ddragon.leagueoflegends.com/cdn/11.2.1/img/champion/" + dado.id + ".png"}/>  
-        </div>
+        <Champion key={dado.id} value={dado}/>
     ).filter(function(el) {
         console.log(el)
         return el.key.toLowerCase().indexOf(needle.toLowerCase()) > -1;
     })   
     
     return (                
-        <div onClick={showlog}>{champs}</div>             
+        <div onClick={showlog.bind(this)}>{champs}</div>      
+               
     )
 }
 
