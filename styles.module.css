@@ -1,3 +1,14 @@
+.flex {
+	display: flex;
+}
+
+.container {
+    display: flex;
+	max-width: 95%;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+}
+
 .championPool{
     width: 55%;
     margin: 0 auto;
@@ -45,4 +56,10 @@
     filter: grayscale(0%);
     cursor: pointer;
     
+}
+
+.team{
+    background-color: blue;
+    float:left;
+    width:300px;
 }
