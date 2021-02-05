@@ -63,6 +63,15 @@
     float:left;
     width:20%;
 }
+
+.flex{
+    display: flex;
+}
+.ban{
+    width: 49%;
+    display: inline;
+    min-height: 60px;
+}
 .blue{
     background-color:rgb(33, 33, 192);
     border: groove 10px rgb(33, 33, 192);

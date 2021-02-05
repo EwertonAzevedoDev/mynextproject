@@ -2,7 +2,7 @@ import styles from '../../styles.module.css'
 import { useState } from "react";
 
 
-function Team({picks, side}){ 
+function Ban({picks, side}){ 
     
     const [teamPicks, setTeamPicks] = useState(picks)
     console.log(picks)
@@ -17,10 +17,10 @@ function Team({picks, side}){
     ) 
     return (
                     
-        <div className={`${styles.team} ${side == "blue" ? styles.blue : styles.red}`}>
+        <div className={`${styles.ban} ${side == "blue" ? styles.blue : styles.red}`}>
              {champPicks}
         </div>            
     )
 }
 
-export default Team
+export default Ban
