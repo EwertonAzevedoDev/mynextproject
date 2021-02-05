@@ -55,12 +55,12 @@ function ChampionSearch({champions}){
    
     return (    
         <div className={styles.container}>
-            <Team picks={blueSidePicksComp}/> 
+            <Team picks={blueSidePicks} side="blue"/> 
             <div className={styles.championPool}>
                 <div className={styles.searchBar}><label>Procurar: </label><input type="text" onChange={search} value={needle} /></div> 
                 <ChampionGrid champions={championList} needle={needle} onChooseChampion={addChoice}/>                  
             </div> 
-            <Team picks={redSidePicks}/> 
+            <Team picks={redSidePicks} side="red"/> 
         </div>
     )
 }

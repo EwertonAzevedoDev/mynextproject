@@ -10,10 +10,11 @@
 }
 
 .championPool{
-    width: 55%;
+    width: 60%;
     margin: 0 auto;
     height: 535px;
     overflow: scroll;
+    scroll-behavior: ;
     background-color: rgb(100, 90, 231);
 }
 
@@ -58,8 +59,15 @@
     
 }
 
-.team{
-    background-color: blue;
+.team{   
     float:left;
-    width:300px;
+    width:20%;
+}
+.blue{
+    background-color:rgb(33, 33, 192);
+    border: groove 10px rgb(33, 33, 192);
+}
+.red{
+    border: groove 10px rgb(214, 30, 30);
+    background-color:rgb(136, 5, 5);
 }
