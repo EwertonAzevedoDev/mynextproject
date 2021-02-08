@@ -10,9 +10,9 @@ function Team({picks, side}){
     if(picks != teamPicks){
         setTeamPicks(picks)
     }
-    const champPicks = teamPicks.map((oPick, index) =>
-        <div className={styles.championsGrid} key={oPick.id}>            
-            <img className={styles.imageskew}  src={oPick.champ}/>  
+    const champPicks = teamPicks.map((oPick, index) =>        
+        <div className={styles.championsGrid2} key={oPick.id}>            
+            <img className={styles.imageskew2}  src={"http://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + oPick.champ + "_0.jpg"}/>  
         </div>
     ) 
     return (

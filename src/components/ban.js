@@ -12,7 +12,7 @@ function Ban({picks, side}){
     }
     const champPicks = teamPicks.map((oPick, index) =>
         <div className={styles.championsGrid} key={oPick.id}>            
-            <img className={styles.imageskew}  src={oPick.champ}/>  
+            <img className={styles.imageskew}   src={"http://ddragon.leagueoflegends.com/cdn/11.2.1/img/champion/" + oPick.champ + ".png"}/>  
         </div>
     ) 
     return (

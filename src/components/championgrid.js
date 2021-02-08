@@ -42,10 +42,10 @@ function ChampionGrid({champions, needle, onChooseChampion}){
     
 
     const chooseChampion = (el) => {  
-        console.log(el)
+        console.log(el.target.attributes.campeao.value)
         let pickWhere = pickOrdering()   
         if(pickWhere.pickOrBan != "finish"){              
-            onChooseChampion(el.target.currentSrc, pickWhere.pickOrBan, pickWhere.side) 
+            onChooseChampion(el.target.attributes.campeao.value, pickWhere.pickOrBan, pickWhere.side) 
             el.target.setAttribute('style', 'display: none');
         }
         
