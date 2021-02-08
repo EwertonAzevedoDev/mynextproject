@@ -13,8 +13,7 @@
     width: 60%;
     margin: 0 auto;
     height: 535px;
-    overflow: scroll;
-    scroll-behavior: ;
+    overflow: scroll;    
     background-color: rgb(100, 90, 231);
 }
 
@@ -37,26 +36,27 @@
     color:coral;
 }
 
-.championsGrid{ 
+.championsGrid{   
+    background-color: aliceblue;    
     width: 75px;
     margin: 5px;    
     position: relative;
-    display: inline-block;        
+    display: inline-flex;            
 }
 
-.imageskew{    
+.imageskew{ 
     transition: transform 0.2s, filter 0.5s;
+    background-color: aliceblue;
     width: 100%;
     z-index: 100;
-    filter: grayscale(80%);
+    filter: grayscale(90%);
 }
 
 .imageskew:hover{  
     transform: scale(1.2, 1.2) ;
     z-index: 1000;
     filter: grayscale(0%);
-    cursor: pointer;
-    
+    cursor: pointer;    
 }
 
 .team{   

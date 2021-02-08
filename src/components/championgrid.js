@@ -42,20 +42,23 @@ function ChampionGrid({champions, needle, onChooseChampion}){
     
 
     const chooseChampion = (el) => {  
+        console.log(el)
         let pickWhere = pickOrdering()   
         if(pickWhere.pickOrBan != "finish"){              
             onChooseChampion(el.target.currentSrc, pickWhere.pickOrBan, pickWhere.side) 
+            el.target.setAttribute('style', 'display: none');
         }
+        
     }
 
     const champs = Object.values(dados).map((dado, index) =>       
-        <Champion key={dado.id} value={dado}/>
+        <Champion key={dado.id} value={dado} onChoose={chooseChampion}/>
     ).filter(function(el) {        
         return el.key.toLowerCase().indexOf(needle.toLowerCase()) > -1;
     })   
     
     return (                
-        <div onClick={chooseChampion.bind(this)}>{champs}</div>      
+        <div id="aaaaa">{champs}</div>      
                
     )
 }

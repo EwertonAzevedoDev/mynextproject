@@ -6,7 +6,7 @@ function Champion(props){
     const [champion, setChampion] = useState(props.value)
 
     return (                
-        <div className={styles.championsGrid}>
+        <div id="bbbb" className={styles.championsGrid} onClick={props.onChoose.bind(this)}>
              <img className={styles.imageskew} campeao={champion} alt={champion.id} src={"http://ddragon.leagueoflegends.com/cdn/11.2.1/img/champion/" + champion.id + ".png"}/>  
         </div>            
     )
