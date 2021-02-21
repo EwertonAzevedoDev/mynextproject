@@ -46,7 +46,7 @@ function ChampionGrid({champions, needle, onChooseChampion}){
         let pickWhere = pickOrdering()   
         if(pickWhere.pickOrBan != "finish"){              
             onChooseChampion(el.target.attributes.campeao.value, pickWhere.pickOrBan, pickWhere.side) 
-            el.target.setAttribute('style', 'display: none');
+            el.target.remove()
         }
         
     }
